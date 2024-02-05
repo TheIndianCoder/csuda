@@ -1,0 +1,35 @@
+{
+    "PropertyTaxPaymentReceipt": {
+        "CorporationName": {
+            "1": "RISALI MUNICIPAL CORPORATION, RISALI"
+        },
+        "ReceiptType": {
+            "1": "PROPERTY TAX RECEIPT"
+        },
+        "Receipt No": {
+            "1": "Receipt No"
+        },
+        "Department / Section": {
+            "1": "Department / Section"
+        }, "Ward No": {
+            "1": "Ward No"
+        }, "Account Description": {
+            "1": "Account Description"
+        }, "Property No": {
+            "1": "Property No"
+        }, "Usage Type": {
+            "1": "Usage Type"
+        }, "Date": {
+            "1": "Date"
+        }, "Date": {
+            "1": "Date"
+        }, "Date": {
+            "1": "Date"
+        }, "Date": {
+            "1": "Date"
+        }
+        
+        
+        
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "PropertyTaxPaymentReceipt":  {
+        "CorporationName" : {
+            "1": "कार्यालय नगर पालिक निगम, रिसाली"
+        },
+        "ReceiptType": {
+            "1": "सम्पति कर का रसीद"
+        },
+        "Receipt No": {
+            "1": "रसीद संख्या"
+        },
+        "Date": {
+            "1": "Date"
+        },
+        "ReceiptType": {
+            "1": "सम्पति कर का रसीद"
+        },
+        "ReceiptType": {
+            "1": "सम्पति कर का रसीद"
+        },
+        "ReceiptType": {
+            "1": "सम्पति कर का रसीद"
+        }
+    }
+}
