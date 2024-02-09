@@ -8,7 +8,7 @@ export function SimpleFooter({ brandName, brandLink, routes }) {
   return (
     <footer className="py-2">
       <div className="flex w-full flex-wrap items-center justify-center gap-6 px-2 md:justify-between">
-        <Typography variant="small" className="font-normal text-inherit">
+        {/* <Typography variant="small" className="font-normal text-inherit">
           &copy; {year}, made {" "}
           <HeartIcon className="-mt-0.5 inline-block h-3.5 w-3.5" /> by{" "}
           <a
@@ -19,7 +19,7 @@ export function SimpleFooter({ brandName, brandLink, routes }) {
             {brandName}
           </a>{" "}
           complete IT solutation.
-        </Typography>
+        </Typography> */}
         <ul className="flex items-center gap-4">
           {routes.map(({ name, path }) => (
             <li key={name}>
@@ -28,7 +28,7 @@ export function SimpleFooter({ brandName, brandLink, routes }) {
                 href={path}
                 target="_blank"
                 variant="small"
-                className="py-0.5 px-1 font-normal text-inherit transition-colors hover:text-red-900"
+                className="py-0.5 px-1 font-normal text-inherit transition-colors hover:text-red-900 float-right"
               >
                 {name}
               </Typography>
@@ -41,10 +41,10 @@ export function SimpleFooter({ brandName, brandLink, routes }) {
 }
 
 SimpleFooter.defaultProps = {
-  brandName: "Uinfo Technology Pvt. Ltd.",
-  brandLink: "https://www.uinfotechnology.com/",
+  brandName: "SPS Pvt. Ltd.",
+  brandLink: "#",
   routes: [
-    { name: "Uinfo Technology Pvt. Ltd.", path: "https://www.uinfotechnology.com/" },
+    { name: "SPS Pvt. Ltd.", path: "#" },
     // { name: "About Us", path: "https://www.google.com" },
     // { name: "Blog", path: "https://www.google.com" },
     // { name: "License", path: "https://www.google.com" },

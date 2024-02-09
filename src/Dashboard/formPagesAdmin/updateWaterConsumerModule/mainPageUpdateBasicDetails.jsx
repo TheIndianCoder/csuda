@@ -1518,13 +1518,13 @@ const MainPageUpdateBasicDetails = () => {
       <div className="relative mb-10 mt-10 flex  flex-col justify-center overflow-hidden">
         {toggle ? (
           <>
-            <div className="m-auto w-full rounded-md border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
+            <div className="m-auto w-full rounded-md  bg-white px-0 pb-4 pt-0 lg:max-w-full">
               <form
                 className="mt-4 h-screen"
                 onSubmit={updateBasicDetailFormHandler}
               >
-                <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full">
-                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+                <div className="m-4 rounded-lg  bg-white px-0  pb-0 pt-0 lg:max-w-full">
+                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                     <h2 className="text-center text-sm font-semibold text-white">
                       Search Water Consumer
                     </h2>
@@ -1541,6 +1541,7 @@ const MainPageUpdateBasicDetails = () => {
                       <Select
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="ward_name"
+                        color='gray'
                         defaultValue={searchConsumerDetail.ward_id}
                         label="select"
                         className="py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
@@ -1583,7 +1584,7 @@ const MainPageUpdateBasicDetails = () => {
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="propertyNo"
                         value={searchConsumerDetail.propertyNo}
-                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                         type="text"
                         placeholder=""
                       />
@@ -1602,7 +1603,7 @@ const MainPageUpdateBasicDetails = () => {
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="ConsumerNo"
                         value={searchConsumerDetail.ConsumerNo}
-                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                         type="text"
                         placeholder=""
                       />
@@ -1621,7 +1622,7 @@ const MainPageUpdateBasicDetails = () => {
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="MobileNUmber"
                         value={searchConsumerDetail.MobileNUmber}
-                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                         type="text"
                         placeholder=""
                       />
@@ -1640,7 +1641,7 @@ const MainPageUpdateBasicDetails = () => {
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="name"
                         value={searchConsumerDetail.name}
-                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                         type="text"
                         placeholder=""
                       />
@@ -1649,13 +1650,8 @@ const MainPageUpdateBasicDetails = () => {
                   <div className="flex items-center justify-center">
                     <button
                       type="submit"
-                      className={`mx-4 mb-2 h-8 w-36 px-4 py-1 tracking-wide text-white 
-            ${disabled ? `cursor-not-allowed ` : `cursor-pointer`}
-            transform rounded-md  
-            bg-green-400 transition-colors duration-200 hover:bg-green-700 
-            focus:bg-green-400 focus:outline-none`}
-                      disabled={disabled}
-                    >
+                      className={`mx-4 mb-2 h-8 w-36 px-4 py-1 tracking-wide text-white ${disabled ? `cursor-not-allowed ` : `cursor-pointer`}
+            transform rounded-md  bg-green-400 transition-colors duration-200 hover:bg-green-700  focus:bg-green-400 focus:outline-none`} disabled={disabled} >
                       Submit
                     </button>
                   </div>
@@ -1791,11 +1787,11 @@ const MainPageUpdateBasicDetails = () => {
                         height="40"
                         width="40"
                         colors={[
-                          "#2fa158",
-                          "#2fa158",
-                          "#2fa158",
-                          "#2fa158",
-                          "#2fa158",
+                          "#FF0000",
+                          "#FF0000",
+                          "#FF0000",
+                          "#FF0000",
+                          "#FF0000",
                         ]}
                       />
                     </div>
@@ -1811,8 +1807,8 @@ const MainPageUpdateBasicDetails = () => {
 
       {displayDetails ? (
         <>
-          <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full">
-            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+          <div className="m-4 rounded-none  bg-white px-0  pb-0 pt-0 lg:max-w-full">
+            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
               <h2 className="text-center text-sm font-semibold text-white">
                 Consumer Details
               </h2>
@@ -1960,8 +1956,8 @@ const MainPageUpdateBasicDetails = () => {
             </div>
           </div>
 
-          <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full">
-            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+          <div className="m-4 rounded-none  bg-white px-0  pb-0 pt-0 lg:max-w-full">
+            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
               <h2 className="text-center text-sm font-semibold text-white">
                 Consumer Connection Details
               </h2>
@@ -2047,8 +2043,8 @@ const MainPageUpdateBasicDetails = () => {
             </div>
           </div>
 
-          <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full ">
-            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+          <div className="m-4 rounded-none  bg-white px-0  pb-0 pt-0 lg:max-w-full ">
+            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
               <h2 className="text-center text-sm font-semibold text-white">
                 Consumer Unit Rate Details
               </h2>
@@ -2136,7 +2132,7 @@ const MainPageUpdateBasicDetails = () => {
                 <div className="rounded-none border border-gray-500  bg-white px-0  pb-0 pt-0 lg:max-w-full">
                   <nav
                     className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1
-             pl-2 pr-0 ring-1 ring-black"
+             pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10"
                   >
                     <h2 className="text-center text-sm font-semibold text-white">
                       Demand Summary
@@ -2162,7 +2158,7 @@ const MainPageUpdateBasicDetails = () => {
                     </tbody>
                   </table>
                 </div>
-                <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+                <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                   <h2 className="text-center text-sm font-semibold text-white">
                     Select Payment Mode
                   </h2>
@@ -2203,6 +2199,7 @@ const MainPageUpdateBasicDetails = () => {
                           defaultValue={paymentDetail.paymentMode}
                           onChange={(e) => handlePaymentDetails(e, "")}
                           label="select"
+                          color="gray"
                           className="py-2 pl-2 pr-3 text-xs font-bold text-gray-900
                                       "
                         >
@@ -2243,7 +2240,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="narration"
                           defaultValue={paymentDetail.narration}
                           onChange={(e) => handlePaymentDetails(e, "narration")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                         focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder=""
@@ -2255,7 +2252,7 @@ const MainPageUpdateBasicDetails = () => {
 
                 {paymentDetail.paymentMode === "Cheque" ? (
                   <>
-                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                       <h2 className="text-center text-sm font-semibold text-white">
                         Bank Details
                       </h2>
@@ -2276,6 +2273,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="bank_name"
                           defaultValue={paymentDetail.bankName}
                           onChange={(e) => handlePaymentDetails(e, "")}
+                          color="gray"
                           label="select"
                           className="w-full py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
                         >
@@ -2313,7 +2311,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="branch"
                           defaultValue={paymentDetail.branch}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                         focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder="Branch"
@@ -2336,7 +2334,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="othersBankName"
                           defaultValue={paymentDetail.othersBankName}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                  focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder=""
@@ -2361,7 +2359,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="chequeDDNo"
                           defaultValue={paymentDetail.chequeDDNo}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                         focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder="Cheque No."
@@ -2386,6 +2384,7 @@ const MainPageUpdateBasicDetails = () => {
                               }
                               name="chequeDDDate"
                               id="chequeDDDate"
+                              color="gray"
                               inputFormat="YYYY-MM-DD"
                               renderInput={(params) => (
                                 <TextField {...params} />
@@ -2399,7 +2398,7 @@ const MainPageUpdateBasicDetails = () => {
                   </>
                 ) : paymentDetail.paymentMode === "DD" ? (
                   <>
-                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                       <h2 className="text-center text-sm font-semibold text-white">
                         Bank Details
                       </h2>
@@ -2421,6 +2420,7 @@ const MainPageUpdateBasicDetails = () => {
                             defaultValue={paymentDetail.bankName}
                             onChange={(e) => handlePaymentDetails(e, "")}
                             label="select"
+                            color="gray"
                             className="w-full py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
                           >
                             {paymentModeDetailsInputFromAPI?.length > 0 ? (
@@ -2457,7 +2457,7 @@ const MainPageUpdateBasicDetails = () => {
                             id="branch"
                             defaultValue={paymentDetail.branch}
                             onChange={(e) => handlePaymentDetails(e, "")}
-                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                             type="text"
                             placeholder="Branch"
@@ -2480,7 +2480,7 @@ const MainPageUpdateBasicDetails = () => {
                             id="othersBankName"
                             defaultValue={paymentDetail.othersBankName}
                             onChange={(e) => handlePaymentDetails(e, "")}
-                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                  focus:bg-white focus:outline-none sm:w-full lg:w-72"
                             type="text"
                             placeholder=""
@@ -2505,7 +2505,7 @@ const MainPageUpdateBasicDetails = () => {
                           name="chequeDDNo"
                           defaultValue={paymentDetail.chequeDDNo}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           id="chequeDDNo"
                           type="text"
@@ -2531,6 +2531,7 @@ const MainPageUpdateBasicDetails = () => {
                               }
                               name="chequeDDDate"
                               id="chequeDDDate"
+                              color="gray"
                               inputFormat="YYYY-MM-DD"
                               renderInput={(params) => (
                                 <TextField {...params} />
@@ -2544,7 +2545,7 @@ const MainPageUpdateBasicDetails = () => {
                   </>
                 ) : paymentDetail.paymentMode === "NEFT" ? (
                   <>
-                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                       <h2 className="text-center text-sm font-semibold text-white">
                         Bank Details
                       </h2>
@@ -2566,6 +2567,7 @@ const MainPageUpdateBasicDetails = () => {
                             defaultValue={paymentDetail.bankName}
                             onChange={(e) => handlePaymentDetails(e, "")}
                             label="select"
+                            color="gray"
                             className="w-full py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
                           >
                             {paymentModeDetailsInputFromAPI?.length > 0 ? (
@@ -2602,7 +2604,7 @@ const MainPageUpdateBasicDetails = () => {
                             id="branch"
                             defaultValue={paymentDetail.branch}
                             onChange={(e) => handlePaymentDetails(e, "")}
-                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                             type="text"
                             placeholder="Branch"
@@ -2625,7 +2627,7 @@ const MainPageUpdateBasicDetails = () => {
                             id="othersBankName"
                             defaultValue={paymentDetail.othersBankName}
                             onChange={(e) => handlePaymentDetails(e, "")}
-                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                  focus:bg-white focus:outline-none sm:w-full lg:w-72"
                             type="text"
                             placeholder=""
@@ -2651,7 +2653,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="neftNo"
                           defaultValue={paymentDetail.neftNo}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder="Cheque No."
@@ -2677,6 +2679,7 @@ const MainPageUpdateBasicDetails = () => {
                               name="neftDate"
                               id="neftDate"
                               inputFormat="YYYY-MM-DD"
+                              color="gray"
                               renderInput={(params) => (
                                 <TextField {...params} />
                               )}
@@ -2689,7 +2692,7 @@ const MainPageUpdateBasicDetails = () => {
                   </>
                 ) : paymentDetail.paymentMode === "RTGS" ? (
                   <>
-                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                       <h2 className="text-center text-sm font-semibold text-white">
                         Bank Details
                       </h2>
@@ -2711,6 +2714,7 @@ const MainPageUpdateBasicDetails = () => {
                             defaultValue={paymentDetail.bankName}
                             onChange={(e) => handlePaymentDetails(e, "")}
                             label="select"
+                            color="gray"
                             className="w-full py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
                           >
                             {paymentModeDetailsInputFromAPI?.length > 0 ? (
@@ -2747,7 +2751,7 @@ const MainPageUpdateBasicDetails = () => {
                             id="branch"
                             defaultValue={paymentDetail.branch}
                             onChange={(e) => handlePaymentDetails(e, "")}
-                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                             type="text"
                             placeholder="Branch"
@@ -2770,7 +2774,7 @@ const MainPageUpdateBasicDetails = () => {
                             id="othersBankName"
                             defaultValue={paymentDetail.othersBankName}
                             onChange={(e) => handlePaymentDetails(e, "")}
-                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                  focus:bg-white focus:outline-none sm:w-full lg:w-72"
                             type="text"
                             placeholder=""
@@ -2796,7 +2800,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="rtgsNo"
                           defaultValue={paymentDetail.rtgsNo}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder="Cheque No."
@@ -2823,6 +2827,7 @@ const MainPageUpdateBasicDetails = () => {
                               name="rtgsDate"
                               id="rtgsDate"
                               inputFormat="YYYY-MM-DD"
+                              color="gray"
                               renderInput={(params) => (
                                 <TextField {...params} />
                               )}
@@ -2835,7 +2840,7 @@ const MainPageUpdateBasicDetails = () => {
                   </>
                 ) : paymentDetail.paymentMode === "Card" ? (
                   <>
-                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                       <h2 className="text-center text-sm font-semibold text-white">
                         Bank Details
                       </h2>
@@ -2857,6 +2862,7 @@ const MainPageUpdateBasicDetails = () => {
                             defaultValue={paymentDetail.bankName}
                             onChange={(e) => handlePaymentDetails(e, "")}
                             label="select"
+                            color="gray"
                             className="w-full py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
                           >
                             {paymentModeDetailsInputFromAPI?.length > 0 ? (
@@ -2893,7 +2899,7 @@ const MainPageUpdateBasicDetails = () => {
                             id="branch"
                             defaultValue={paymentDetail.branch}
                             onChange={(e) => handlePaymentDetails(e, "")}
-                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                             type="text"
                             placeholder="Branch"
@@ -2916,7 +2922,7 @@ const MainPageUpdateBasicDetails = () => {
                             id="othersBankName"
                             defaultValue={paymentDetail.othersBankName}
                             onChange={(e) => handlePaymentDetails(e, "")}
-                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                            className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                  focus:bg-white focus:outline-none sm:w-full lg:w-72"
                             type="text"
                             placeholder=""
@@ -2926,7 +2932,7 @@ const MainPageUpdateBasicDetails = () => {
                         ""
                       )}
                     </div>
-                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+                    <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                       <h2 className="text-center text-sm font-semibold text-white">
                         Card Details
                       </h2>
@@ -2948,6 +2954,7 @@ const MainPageUpdateBasicDetails = () => {
                           defaultValue={paymentDetail.cardType}
                           onChange={(e) => handlePaymentDetails(e, "")}
                           label="Select"
+                          color="gray"
                           className="w-full py-1 pl-2 pr-3 text-xs font-bold 
                                                   text-gray-900
                                                 "
@@ -2971,7 +2978,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="transactionId"
                           defaultValue={paymentDetail.transactionId}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder="Branch"
@@ -2995,7 +3002,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="apprCode"
                           defaultValue={paymentDetail.apprCode}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder="Branch"
@@ -3016,7 +3023,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="cardNo"
                           defaultValue={paymentDetail.cardNo}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder="Branch"
@@ -3040,7 +3047,7 @@ const MainPageUpdateBasicDetails = () => {
                           id="cardHolderName"
                           defaultValue={paymentDetail.cardHolderName}
                           onChange={(e) => handlePaymentDetails(e, "")}
-                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500
+                          className="bg-white-200 text-white-700 appearance-none rounded border border-gray-400 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500
                        focus:bg-white focus:outline-none sm:w-full lg:w-72"
                           type="text"
                           placeholder="Branch"
@@ -3154,7 +3161,7 @@ const MainPageUpdateBasicDetails = () => {
                 visible={true}
                 height="40"
                 width="40"
-                colors={["#2fa158", "#2fa158", "#2fa158", "#2fa158", "#2fa158"]}
+                colors={["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"]}
               />
             </div>
           ) : null}
@@ -3164,7 +3171,7 @@ const MainPageUpdateBasicDetails = () => {
                 visible={true}
                 height="40"
                 width="40"
-                colors={["#2fa158", "#2fa158", "#2fa158", "#2fa158", "#2fa158"]}
+                colors={["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"]}
               />
             </div>
           ) : null}
@@ -3174,7 +3181,7 @@ const MainPageUpdateBasicDetails = () => {
                 visible={true}
                 height="40"
                 width="40"
-                colors={["#2fa158", "#2fa158", "#2fa158", "#2fa158", "#2fa158"]}
+                colors={["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"]}
               />
             </div>
           ) : null}
@@ -3231,7 +3238,7 @@ const MainPageUpdateBasicDetails = () => {
       {displayConsumerPaymentDetail ? (
         <>
           <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full">
-            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
               <h2 className="text-center text-sm font-semibold text-white">
                 Consumer Details
               </h2>
@@ -3372,7 +3379,7 @@ const MainPageUpdateBasicDetails = () => {
             </div>
           </div>
           <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full">
-            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
               <h2 className="text-center text-sm font-semibold text-white">
                 Consumer Connection Details
               </h2>
@@ -3461,7 +3468,7 @@ const MainPageUpdateBasicDetails = () => {
             className="m-4 mb-2 rounded-none border border-gray-500 bg-white  px-0 py-6 pb-0  
      pt-0 lg:max-w-full"
           >
-            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+            <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
               <h2 className="text-center text-sm font-semibold text-white">
                 Consumer Payment Details
               </h2>

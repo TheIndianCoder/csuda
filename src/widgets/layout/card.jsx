@@ -8,14 +8,14 @@ const { Meta } = Card;
 
 const Card1 = () => (
     <>  
-    <div className='md:flex md:justify-between mt-10 grid justify-items-center bg-gray-300'>
+    <div className='md:flex md:justify-between -mb-30 grid justify-items-center bg-gray-300'>
         <Card
             hoverable
             style={{
             width: 340,
             margin: '10rem auto',
             }}
-            className='mr-10 p-5'
+            className='mr-10 p-1 '
             cover={<img alt="example" className="h-[15rem] w-[5rem !importent]" src="https://municipalservices.jharkhand.gov.in/public/assets/img/icons/rcm-1.png" />}
         >
             {/* <Meta title="Europe Street beat" description="www.instagram.com" /> */}

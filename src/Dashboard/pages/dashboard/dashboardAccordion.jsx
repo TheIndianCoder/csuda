@@ -48,14 +48,14 @@ function DashboardAccordion() {
     <Fragment>
       {/* dashboard side nav */}
       
-      {/* <Accordian open={open === 1} icon={<Icon id={1} open={open} />}>
-        <AccordionHeader
-          className='middle none font-sans font-bold center transition-all hover:text-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg text-white border-none hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize relative'>
-          <Link to={'/dashboard/dashboard/home'}>
-            Dashboard
-          </Link>
-        </AccordionHeader>
-      </Accordian> */}
+      
+      {/* <AccordionBody
+        className='middle none font-sans font-bold center transition-all hover:text-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg text-white border-none hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize relative'>
+        <Link to={'/dashboard/dashboard/home'}>
+          Dashboard
+        </Link>
+      </AccordionBody> */}
+      
 
       <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
         <AccordionHeader
@@ -64,9 +64,9 @@ function DashboardAccordion() {
           Manage User
         </AccordionHeader>
         <AccordionBody>
-          <ul className="list-disc customlist text-white text-xl font-bold text-green-500">
+          <ul className="list-disc customlist text-white text-xl font-bold ">
             {routes.map(({ layout, pages }) => {
-              // console.log(pages)
+              console.log("pagesp",layout)
               return pages.map(({ icon, name, path, upIcon, downIcon }) => (
                 layout == "dashboard" &&
                 <AccordionListComponent
@@ -83,28 +83,34 @@ function DashboardAccordion() {
         </AccordionBody>
       </Accordion>
       {/* SAF Setup */}
-      {/* <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
-        <AccordionHeader 
-        className=' middle none font-sans font-bold center transition-all hover:text-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg text-white border-none hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize relative' 
-        onClick={() => handleOpen(4)}>
-          SAF Manage
+      <Accordion open={open === 8} icon={<Icon id={8} open={open} />}>
+        <AccordionHeader
+          className='middle none font-sans font-bold center transition-all hover:text-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg text-white border-none hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize relative'
+          onClick={() => handleOpen(8)}>
+           SAF
         </AccordionHeader>
         <AccordionBody>
-          <ul className="list-disc customlist text-white text-xl font-bold text-red-500">
+          <ul className="list-disc customlist text-white text-xl font-bold">
             {routes.map(({ layout, pages }) => {
-              return pages.map(({ icon, name, path, upIcon, downIcon }) => (
-                layout == "propertyReport" && <AccordionListComponent
-                  name={name}
-                  layout={layout}
-                  path={path}
-                  sidenavColor={sidenavColor}
-                  sidenavType={sidenavType} />
-              ))
+              // console.log(pages)
+              return pages.map(({ icon, name, path, upIcon, downIcon }) => {
+                console.log(layout)
+                return (
+                  layout == "saf" &&
+                  <AccordionListComponent
+                    name={name} 
+                    layout={layout}
+                    path={path}
+                    sidenavColor={sidenavColor}
+                    sidenavType={sidenavType} />
+                )
+              })
             })
             }
           </ul>
         </AccordionBody>
-      </Accordion> */}
+      </Accordion>
+      {/* Property setup */}
       <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
         <AccordionHeader
           className=' middle none font-sans font-bold center transition-all hover:text-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg text-white border-none hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize relative'
@@ -147,7 +153,7 @@ function DashboardAccordion() {
           </ul>
         </AccordionBody>
       </Accordion>
-      {/* property report side nav */}
+      {/* property report side nav */} 
       <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
         <AccordionHeader
           className=' middle none font-sans font-bold center transition-all hover:text-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg text-white border-none hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize relative'
@@ -199,14 +205,14 @@ function DashboardAccordion() {
         </AccordionBody>
       </Accordion>  */}
       {/* water consumer side nav */}
-      {/* <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
+      <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
         <AccordionHeader
           className='middle none font-sans font-bold center transition-all hover:text-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg text-white border-none hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize relative'
           onClick={() => handleOpen(5)}>
            Water Consumer
         </AccordionHeader>
         <AccordionBody>
-          <ul className="list-disc customlist text-white text-xl font-bold text-green-500">
+          <ul className="list-disc customlist text-white text-xl font-bold">
             {routes.map(({ layout, pages }) => {
               // console.log(pages)
               return pages.map(({ icon, name, path, upIcon, downIcon }) => {
@@ -225,12 +231,40 @@ function DashboardAccordion() {
             }
           </ul>
         </AccordionBody>
-      </Accordion> */}
-      {/* Bhu Bhatak side nav */}
-      {/* <Accordion open={open === 6} icon={<Icon id={6} open={open} />}>
+      </Accordion>
+      {/* water Report */}
+      <Accordion open={open === 6} icon={<Icon id={6} open={open} />}>
         <AccordionHeader
           className='middle none font-sans font-bold center transition-all hover:text-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg text-white border-none hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize relative'
           onClick={() => handleOpen(6)}>
+           Water Report
+        </AccordionHeader>
+        <AccordionBody>
+          <ul className="list-disc customlist text-white text-xl font-bold">
+            {routes.map(({ layout, pages }) => {
+              // console.log(pages)
+              return pages.map(({ icon, name, path, upIcon, downIcon }) => {
+                console.log(layout)
+                return (
+                  layout == "waterReport" &&
+                  <AccordionListComponent
+                    name={name} 
+                    layout={layout}
+                    path={path}
+                    sidenavColor={sidenavColor}
+                    sidenavType={sidenavType} />
+                )
+              })
+            })
+            }
+          </ul>
+        </AccordionBody>
+      </Accordion>
+      {/* Bhu Bhatak side nav */}
+      {/* <Accordion open={open === 7} icon={<Icon id={7} open={open} />}>
+        <AccordionHeader
+          className='middle none font-sans font-bold center transition-all hover:text-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 rounded-lg text-white border-none hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize relative'
+          onClick={() => handleOpen(7)}>
            Bhu Bhatak
         </AccordionHeader>
         <AccordionBody>

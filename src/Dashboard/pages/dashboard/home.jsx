@@ -27,6 +27,7 @@ import {
   projectsTableData,
   ordersOverviewData,
 } from "@/Dashboard/data";
+import { dashboardRoutesObject } from "@/Dashboard/data/routes-dashboard-constants";
 
 export function Home() {
   console.log("inside home of dashboard:::")

@@ -575,13 +575,13 @@ const MainPageUpdateWaterConsumer = () => {
         {toggle ? (
           <>
             <div
-              className="m-auto w-full rounded-md border border-gray-500 bg-white px-0 
+              className="m-auto w-full rounded-md   bg-white px-0 
         pb-4 pt-0 
         lg:max-w-full"
             >
               <form className="" onSubmit={updateBasicDetailFormHandler}>
                 <div className="rounded-none bg-white px-0  pb-0 pt-0 lg:max-w-full">
-                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                     <h2 className="text-center text-sm font-semibold text-white">
                       Update Consumer
                     </h2>
@@ -598,6 +598,7 @@ const MainPageUpdateWaterConsumer = () => {
                       <Select
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="ward_name"
+                        color="gray"
                         defaultValue={searchConsumerDetail.ward_id}
                         label="select"
                         className="py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
@@ -640,7 +641,7 @@ const MainPageUpdateWaterConsumer = () => {
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="propertyNo"
                         value={searchConsumerDetail.propertyNo}
-                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                         type="text"
                         placeholder=""
                       />
@@ -659,7 +660,7 @@ const MainPageUpdateWaterConsumer = () => {
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="ConsumerNo"
                         value={searchConsumerDetail.ConsumerNo}
-                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                         type="text"
                         placeholder=""
                       />
@@ -678,7 +679,7 @@ const MainPageUpdateWaterConsumer = () => {
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="MobileNUmber"
                         value={searchConsumerDetail.MobileNUmber}
-                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                         type="text"
                         placeholder=""
                       />
@@ -697,7 +698,7 @@ const MainPageUpdateWaterConsumer = () => {
                         onChange={(e) => handleSearchQueryChange(e)}
                         name="name"
                         value={searchConsumerDetail.name}
-                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                         type="text"
                         placeholder=""
                       />
@@ -724,11 +725,11 @@ const MainPageUpdateWaterConsumer = () => {
                       height="40"
                       width="40"
                       colors={[
-                        "#2fa158",
-                        "#2fa158",
-                        "#2fa158",
-                        "#2fa158",
-                        "#2fa158",
+                        "#FF0000",
+                        "#FF0000",
+                        "#FF0000",
+                        "#FF0000",
+                        "#FF0000",
                       ]}
                     />
                   </div>

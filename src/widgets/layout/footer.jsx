@@ -1,12 +1,15 @@
 import PropTypes from "prop-types";
 import { Typography, IconButton } from "@material-tailwind/react";
 import { Home, Profile, SignIn, SignUp, MaintenancePage } from "@/pages";
+import { Link } from "react-router-dom";
+import routes from "@/routes";
+import publicRoute from "@/publicRoute";
 
 const year = new Date().getFullYear();
 
-export function Footer({ title, description, socials, menus, copyright }) {
+export function Footer({ title, description, socials, menus, copyright, routes }) {
   return (
-    <footer className=" px-4 pt-8 pb-6 bg-blue-gray-900">
+    <footer className=" px-4 bg-blue-gray-900 ">
       <div className="container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 lg:w-6/12">
@@ -33,7 +36,10 @@ export function Footer({ title, description, socials, menus, copyright }) {
               ))}
             </div>
           </div>
-          <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
+          <Link to="/sign-in" element={"/sign-in"} className="text-white hover:text-red-600" />          
+          
+          <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">           
+
             {menus.map(({ name, items }) => (
               <div key={name}>
                 <Typography
@@ -135,15 +141,16 @@ Footer.defaultProps = {
     <>
       <p className="text-white"> Copyright © {year} Rajnandgaon Municipal - Developed & Maintained by{" "}</p>
       <a
-        href="https://www.uinfotechnology.com/"
+        href=""
         target="_blank"
         className="text-white hover:text-red-700"
       >
-        Uinfo Technology Pvt. Ltd.
+        SPS Pvt. Ltd.
       </a>
       
     </>
   ),
+  routes: routes,
 };
 
 Footer.propTypes = {

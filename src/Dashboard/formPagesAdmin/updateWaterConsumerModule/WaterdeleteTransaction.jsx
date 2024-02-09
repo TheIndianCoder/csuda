@@ -138,7 +138,7 @@ const WaterdeleteTransaction = () => {
   return (
     <div className="relative mb-10 mt-10 flex flex-col justify-center overflow-hidden">
       <div className="m-auto w-full rounded-md border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
-        <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+        <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
           <h2 className="text-center text-sm font-semibold text-white">
             Water Delete Transaction
           </h2>
@@ -146,7 +146,7 @@ const WaterdeleteTransaction = () => {
         <div>
           {" "}
           <form className="mt-4" onSubmit={(e) => handleSubmit(e)}>
-            <div className="m-4 flex flex-row  rounded-none border  border-gray-500 bg-white px-4 pb-4 pt-0 md:flex-row lg:max-w-full">
+            <div className="m-4 flex flex-row  rounded-none bg-white px-4 pb-4 pt-0 md:flex-row lg:max-w-full">
               <div className="mb-4 ml-3 mt-2 flex min-w-fit max-w-fit">
                 <label
                   className=" mb-2  mt-1 block w-[15rem] text-sm font-bold text-gray-700 "
@@ -166,7 +166,7 @@ const WaterdeleteTransaction = () => {
                   <input
                     onChange={handleSearchQueryObjChange}
                     id="transaction_no"
-                    className="bg-white-200 text-white-700 w-72 appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                    className="bg-white-200 text-white-700 w-72 appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                     type="text"
                     placeholder="Transaction No."
                   />
@@ -186,8 +186,8 @@ const WaterdeleteTransaction = () => {
         {showModal == true && data != null ? (
           <>
             <form className="mt-4 ">
-              <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-4 pt-0 lg:max-w-full">
-                <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+              <div className="m-4 rounded-none  bg-white px-0  pb-4 pt-0 lg:max-w-full">
+                <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                   <h2 className="text-center text-sm font-semibold text-white">
                     Owner Details
                   </h2>
@@ -263,7 +263,7 @@ const WaterdeleteTransaction = () => {
             </form>
             <form className="mt-4 ">
               <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-4 pt-0 lg:max-w-full">
-                <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+                <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                   <h2 className="text-center text-sm font-semibold text-white">
                     Details of Transaction No.{" "}
                     {data.transaction_no
@@ -425,7 +425,7 @@ const WaterdeleteTransaction = () => {
                                   text-gray-900
                                   transition
                                   ease-in-out
-                                  focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
+                                  focus:border-gray-600 focus:bg-white focus:text-gray-700 focus:outline-none"
                       type="file"
                       accept=".png, .jpg, .jpeg, .pdf"
                       id="approvalLetter"

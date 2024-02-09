@@ -116,8 +116,8 @@ const ArrearandCurrentCollection = () => {
   return (
     <>
       <ToastContainer autoClose={2000} />
-      <div className="m-4 mt-4 rounded-none border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
-        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+      <div className="m-4 mt-4 rounded-lg border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
+        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
           <h2 className="text-center text-sm font-semibold text-white">
             Arrear and Current Collection Report
           </h2>
@@ -138,6 +138,7 @@ const ArrearandCurrentCollection = () => {
                   <DesktopDatePicker
                     id="fromDate"
                     inputFormat="YYYY-MM-DD"
+                    color="gray"
                     onChange={(date) => {
                       const formattedDate = formatDate(date);
                       setInputData({ ...inputData, fromDate: formattedDate });
@@ -166,6 +167,7 @@ const ArrearandCurrentCollection = () => {
                 <Stack spacing={3}>
                   <DesktopDatePicker
                     id="toDate"
+                    color="gray"
                     inputFormat="YYYY-MM-DD"
                     onChange={(date) => {
                       const formattedDate = formatDate(date);
@@ -199,6 +201,7 @@ const ArrearandCurrentCollection = () => {
                   });
                 }}
                 label="select"
+                color="gray"
                 className="py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
               >
                 {dataLoding ? (
@@ -242,7 +245,7 @@ const ArrearandCurrentCollection = () => {
                 visible={true}
                 height="40"
                 width="40"
-                colors={["#2fa158", "#2fa158", "#2fa158", "#2fa158", "#2fa158"]}
+                colors={["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"]}
               />
             </div>
           ) : null}

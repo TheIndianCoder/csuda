@@ -9,7 +9,7 @@ const SUDA_API_BASE_URL = import.meta.env.VITE_SUDA_API_BASE_URL
 
 const PaymentReceiptViewPaymentDetails = ({setDisplayHindiForm, consumerNumberAfterCreation, modeOfPayment,
     consumerDetails, consumerPaymentDetails, val,
-    setDisplayConsumerPaymentDetail, setDisplayPrintDemandForm}) => {
+setDisplayConsumerPaymentDetail, setDisplayPrintDemandForm}) => {
   const [receiptDetails, setReceiptDetails] = useState([])
   console.log("Db test",consumerDetails)
     const handleLanguageChange = () => {
@@ -75,7 +75,7 @@ console.log(val)
       <div className="relative mb-10 mt-10 flex min-h-screen flex-col justify-center overflow-hidden">
         <ToastContainer autoClose={2000} />
         <div className="m-auto w-full rounded-md border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
-          <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+          <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
             <h2 className="text-center text-sm font-semibold text-white">
               PAYMENT RECEIPT
             </h2>
@@ -124,7 +124,7 @@ console.log(val)
                                     </td>
                                     <td className="whitespace-nowrap px-1 py-1  text-center">
                                       <p className="text-center font-body text-2xl font-extrabold uppercase tracking-tight">
-                                        BHILAI MUNICIPAL CORPORATION, BHILAI
+                                        RAJNANDGAON MUNICIPAL CORPORATION, RAJNANDGAON
                                       </p>
                                     </td>
                                     <td className="whitespace-nowrap px-1 py-1  text-center">
@@ -984,7 +984,7 @@ console.log(val)
                             <tbody>
                               <tr>
                                 <td className="whitespace-normal px-3 py-0 text-xs font-bold font-normal text-gray-900">
-                                  BHILAI MUNICIPAL CORPORATION, BHILAI
+                                  RAJNANDGAON MUNICIPAL CORPORATION, RAJNANDGAON
                                 </td>
                                 <td className="whitespace-normal px-3 py-0 text-right text-xs font-normal text-gray-900">
                                   In Collaboration With{" "}

@@ -643,7 +643,7 @@ const MainPageLastPaymentUpdate = () => {
               visible={true}
               height="80"
               width="80"
-              colors={["#2fa158", "#2fa158", "#2fa158", "#2fa158", "#2fa158"]}
+              colors={["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"]}
             />
           </div>
         </div>
@@ -651,13 +651,13 @@ const MainPageLastPaymentUpdate = () => {
         <div className="relative mb-10 mt-10 flex  flex-col justify-center overflow-hidden">
           {toggle ? (
             <>
-              <div className="m-auto w-full rounded-md border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
+              <div className="m-auto w-full rounded-md  bg-white px-0 pb-4 pt-0 lg:max-w-full">
                 <form
                   className="mt-4 h-screen" 
                   onSubmit={updateBasicDetailFormHandler}
                 >
-                  <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full">
-                    <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+                  <div className="m-4 rounded-none  bg-white px-0  pb-0 pt-0 lg:max-w-full">
+                    <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                       <h2 className="text-center text-sm font-semibold text-white">
                         Last Payment Update
                       </h2>
@@ -674,6 +674,7 @@ const MainPageLastPaymentUpdate = () => {
                         <Select
                           onChange={(e) => handleSearchQueryChange(e)}
                           name="ward_name"
+                          color="gray"
                           defaultValue={searchConsumerDetail.ward_id}
                           label="select"
                           className="py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
@@ -714,7 +715,7 @@ const MainPageLastPaymentUpdate = () => {
                           onChange={(e) => handleSearchQueryChange(e)}
                           name="propertyNo"
                           value={searchConsumerDetail.propertyNo}
-                          className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                          className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                           type="text"
                           placeholder=""
                         />
@@ -734,7 +735,7 @@ const MainPageLastPaymentUpdate = () => {
                           onChange={(e) => handleSearchQueryChange(e)}
                           name="ConsumerNo"
                           value={searchConsumerDetail.ConsumerNo}
-                          className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                          className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                           type="text"
                           placeholder=""
                         />
@@ -753,15 +754,15 @@ const MainPageLastPaymentUpdate = () => {
                           onChange={(e) => handleSearchQueryChange(e)}
                           name="MobileNUmber"
                           value={searchConsumerDetail.MobileNUmber}
-                          className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                          className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                           type="text"
                           placeholder=""
                         />
                       </div>
-                      <div className="mb-3 ml-3 mt-2 min-w-fit max-w-fit">
+                      {/* <div className="mb-3 ml-3 mt-2 min-w-fit max-w-fit">
                         <p className="text-xs font-bold text-red-600">OR</p>
-                      </div>
-                      <div className="mb-2 ml-3 mt-2 min-w-fit max-w-fit">
+                      </div> */}
+                      {/* <div className="mb-2 ml-3 mt-2 min-w-fit max-w-fit">
                         <label
                           className="mb-2 block text-xs font-bold text-gray-700"
                           htmlFor="password"
@@ -772,11 +773,11 @@ const MainPageLastPaymentUpdate = () => {
                           onChange={(e) => handleSearchQueryChange(e)}
                           name="name"
                           value={searchConsumerDetail.name}
-                          className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-blue-500 focus:bg-white focus:outline-none"
+                          className="bg-white-200 text-white-700 w-full appearance-none rounded border border-gray-500 px-4 py-2 leading-tight focus:border-2 focus:border-gray-500 focus:bg-white focus:outline-none"
                           type="text"
                           placeholder=""
                         />
-                      </div>
+                      </div> */}
                     </div>
                     <div className="flex items-center justify-center">
                       <button
@@ -803,7 +804,7 @@ const MainPageLastPaymentUpdate = () => {
                 visible={true}
                 height="40"
                 width="40"
-                colors={["#2fa158", "#2fa158", "#2fa158", "#2fa158", "#2fa158"]}
+                colors={["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"]}
               />
             </div>
           ) : null}
@@ -834,7 +835,7 @@ const MainPageLastPaymentUpdate = () => {
                 visible={true}
                 height="40"
                 width="40"
-                colors={["#2fa158", "#2fa158", "#2fa158", "#2fa158", "#2fa158"]}
+                colors={["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"]}
               />
             </div>
           ) : null}
@@ -845,7 +846,7 @@ const MainPageLastPaymentUpdate = () => {
                   id="view_box_start"
                   className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full"
                 >
-                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                     <h2 className="text-center text-sm font-semibold text-white">
                       Consumer Details
                     </h2>
@@ -860,7 +861,7 @@ const MainPageLastPaymentUpdate = () => {
               )}
               {consumerConnectionDetails.length > 0 && (
                 <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full">
-                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                     <h2 className="text-center text-sm font-semibold text-white">
                       Consumer Connection Details
                     </h2>
@@ -900,7 +901,7 @@ const MainPageLastPaymentUpdate = () => {
 
               {displayDetails && (
                 <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full">
-                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                     <h2 className="text-center text-sm font-semibold text-white">
                       Last Payment Details
                     </h2>
@@ -931,6 +932,7 @@ const MainPageLastPaymentUpdate = () => {
                       <Select
                         onChange={(e) => setSelectedDemandMonth(e)}
                         label="Select"
+                        color="gray"
                         className="w-full py-1 pl-2 pr-3 text-xs font-bold 
                                                text-gray-900
                                              "
@@ -963,11 +965,11 @@ const MainPageLastPaymentUpdate = () => {
                         height="40"
                         width="40"
                         colors={[
-                          "#2fa158",
-                          "#2fa158",
-                          "#2fa158",
-                          "#2fa158",
-                          "#2fa158",
+                          "#FF0000",
+                          "#FF0000",
+                          "#FF0000",
+                          "#FF0000",
+                          "#FF0000",
                         ]} 
                       />
                     </div>
@@ -989,7 +991,7 @@ const MainPageLastPaymentUpdate = () => {
 
               {displayDetails && (
                 <div className="m-4 rounded-none border border-gray-500 bg-white px-0  pb-0 pt-0 lg:max-w-full">
-                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+                  <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
                     <h2 className="text-center text-sm font-semibold text-white">
                       Receipt Details
                     </h2>
@@ -1108,6 +1110,7 @@ const MainPageLastPaymentUpdate = () => {
                             // onChange={(e)=>handlePaymentDetails(e, "chequeDDDate")}
                             name="chequeDDDate"
                             value={userInput.receipt_date}
+                            color="gray"
                             onChange={(e) =>
                               setUserInput({
                                 ...userInput,
@@ -1151,7 +1154,7 @@ const MainPageLastPaymentUpdate = () => {
                                             text-gray-900
                                             transition
                                             ease-in-out
-                                            focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
+                                            focus:border-gray-600 focus:bg-white focus:text-gray-700 focus:outline-none"
                         type="file"
                         id="owner_file"
                         onChange={(e) => setInputFile(e.target.files[0])}
@@ -1184,11 +1187,11 @@ const MainPageLastPaymentUpdate = () => {
                       height="40"
                       width="40"
                       colors={[
-                        "#2fa158",
-                        "#2fa158",
-                        "#2fa158",
-                        "#2fa158",
-                        "#2fa158",
+                        "#FF0000",
+                        "#FF0000",
+                        "#FF0000",
+                        "#FF0000",
+                        "#FF0000",
                       ]}
                     />
                   )}

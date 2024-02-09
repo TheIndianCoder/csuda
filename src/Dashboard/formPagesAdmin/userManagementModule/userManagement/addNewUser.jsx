@@ -47,16 +47,42 @@ const AddNewUser = () => {
       try {
         const url = `${BACKEND_BASE_URL}/user/create`;
         
-        const headers = {
+        // const requestOptions = {
+        //   method: "POST",
+        //   headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${getCookieByName('SUDA_TOKEN')}` },
+        //   body: JSON.stringify(finalReqObjForSafNewEntry),
+        // }
+
+      const header = {
+        method: "POST",
+        url: url,
+        headers: {
+          "Content-Type": "application/json",
+          "Accept":"application/json",
           Authorization: `Bearer ${getCookieByName("SUDA_TOKEN")}`,
-          "Accept":"application/json text/plain",
-          "Content-Type": "multipart/form-data",
-        };
+        },
+        data: formData,
+      }
+        // const safNewEntryUrl = `${SUDA_API_BASE_URL}/user/SAFEntry` 
+        // const response = await fetch(safNewEntryUrl, requestOptions)
         
         
-        const response = await axios.post(url, formData, { headers });
-        const responseBody = response.data;
+        console.log("form data");
+        axios.request(header).then((response) => {
+          console.log("response",response.data)
+          const responseBody = response.data;
+        }).catch((err) => {
+          console.log("err",err)
+        })
+        // const response = await axios.post(url, formData, { header });
+        // const responseBody = response.data;
+        if(responseBody){
+          console.log("responseBody",responseBody)
+        }else{
+          console.log("responseBody NOT FOUND")
+        }
         console.log("succ",responseBody)
+        return;
         if (
           responseBody?.success == true &&
           responseBody?.data.message == "User created successfully"

@@ -21,9 +21,10 @@ export const routes = [
   },
  
   {
+    
     icon: ArrowRightOnRectangleIcon,
     name: "Official Login",
-    path: "/sign-in",
+    path: "login",
     element: <SignIn />,
     id: 3
   },

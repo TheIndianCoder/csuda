@@ -135,8 +135,8 @@ const MainPageUpdateWaterTeamWiseCollectionSumary = () => {
   return (
     <div>
       <ToastContainer autoClose={2000} />
-      <div className="my-8 shadow">
-        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+      <div className="my-8 shadow bg-white rounded-lg">
+        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
           <h2 className="text-center text-sm font-semibold text-white">
             Team Wise Collection Summary
           </h2>
@@ -151,6 +151,7 @@ const MainPageUpdateWaterTeamWiseCollectionSumary = () => {
               <DesktopDatePicker
                 id="fromDate"
                 inputFormat="YYYY-MM-DD"
+                color="gray"
                 onChange={(date) => {
                   const formattedDate = formatDate(date);
                   setInputData({ ...inputData, fromDate: formattedDate });
@@ -171,6 +172,7 @@ const MainPageUpdateWaterTeamWiseCollectionSumary = () => {
               <DesktopDatePicker
                 id="toDate"
                 inputFormat="YYYY-MM-DD"
+                color="gray"
                 onChange={(date) => {
                   const formattedDate = formatDate(date);
                   setInputData({ ...inputData, toDate: formattedDate });
@@ -191,6 +193,7 @@ const MainPageUpdateWaterTeamWiseCollectionSumary = () => {
             </label>
             <Select
               name="operatorName"
+              color="gray"
               onChange={(value) => {
                 const selectedWard = JSON.parse(value);
                 setInputData({

@@ -147,9 +147,9 @@ const MainPageWaterBankReconciliation = () => {
     return tableData.slice(firstPageIndex, lastPageIndex);
   }, [currentPage, tableData]);
 
-  console.log(currentTableData);
+  // console.log(currentTableData);
 
-  console.log("otherDetails", otherDetails);
+  // console.log("otherDetails", otherDetails);
 
   //update clearance status function
   async function UpdateClearanceStatus() {

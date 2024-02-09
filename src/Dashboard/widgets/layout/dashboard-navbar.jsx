@@ -30,8 +30,11 @@ import {
 } from "@/Dashboard/context";
 import routes from "@/routes-dashboard";
 import { DEFAULT_SUDA_TOKEN_VALUE, DEFAULT_SUDA_USER_ID_VALUE, DEFAULT_SUDA_USER_NAME_VALUE, DEFAULT_SUDA_USER_ROLE_VALUE } from "@/utils/appConstants";
+import { ro } from "date-fns/locale";
 
 export function DashboardNavbar() {
+  console.log("route", routes)
+  
   const [controller, dispatch] = useMaterialTailwindController();  // set dashboard side nav bar
   // console.log("inside DashboardNavbar ::: printing controller")
   // console.log(controller)
@@ -101,12 +104,14 @@ export function DashboardNavbar() {
           </IconButton>
           {/* side nav bar start end */}
           
-          {
+          {/* side nav bar link start here */}
+          {            
             routes.map((item, index) => {
+              
               for (let i = 0; i < item.pages.length; i++) {
                 if (item.pages[i].path.includes(subpage)) {
                   return (
-                    <Typography key={`${index}-${i}`} variant="h6" color="blue-gray">
+                    <Typography key={`${index}-${i}`} variant="h6" color="blue-gray">                      
                       {item.pages[i].name}
                     </Typography>
                   )
@@ -114,6 +119,7 @@ export function DashboardNavbar() {
               }
             })
           }
+          {/* side nav bar link End here */}
         </div>
         <div className="md:mr-4 w-82 flex justify-evenly">
             {/* <img src="http://localhost/img/ch_logo.png" alt="rajnandgaon " className="w-20 h-20 rounded-full" /> */}

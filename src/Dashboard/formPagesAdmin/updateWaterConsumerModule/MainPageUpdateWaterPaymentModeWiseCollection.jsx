@@ -129,7 +129,7 @@ const MainPageUpdateWaterPaymentModeWiseCollection = () => {
     <div>
       <ToastContainer autoClose={2000} />
       <div className="m-4 mt-4 rounded-none border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
-        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
           <h2 className="text-center text-sm font-semibold text-white">
             Payment Mode Wise Report
           </h2>
@@ -152,6 +152,7 @@ const MainPageUpdateWaterPaymentModeWiseCollection = () => {
                   }}
                   renderInput={(params) => <TextField {...params} />}
                   inputFormat="YYYY-MM-DD"
+                  color="gray"
                   disableFuture={true}
                   value={
                     inputData.from_date !== ""
@@ -171,12 +172,14 @@ const MainPageUpdateWaterPaymentModeWiseCollection = () => {
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DesktopDatePicker
                   id="to_date"
+                  className="focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-600"
                   onChange={(date) => {
                     const formattedDate = formatDate(date);
                     setInputData({ ...inputData, to_date: formattedDate });
                   }}
                   disableFuture={true}
                   renderInput={(params) => <TextField {...params} />}
+                  color="gray"
                   inputFormat="YYYY-MM-DD"
                   value={
                     inputData.to_date !== "" ? inputData.to_date : "YYYY-MM-DD"
@@ -194,6 +197,7 @@ const MainPageUpdateWaterPaymentModeWiseCollection = () => {
               <Select
                 label="select"
                 className="py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
+                color="gray"
                 onChange={(value) => {
                   const selectedWard = JSON.parse(value);
                   setInputData({

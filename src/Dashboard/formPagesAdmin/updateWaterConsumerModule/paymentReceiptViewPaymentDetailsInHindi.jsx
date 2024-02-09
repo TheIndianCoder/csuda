@@ -66,8 +66,8 @@ const PaymentReceiptViewPaymentDetailsInHindi = ({setDisplayHindiForm, consumerN
     return (
         <div className="relative flex flex-col justify-center min-h-screen overflow-hidden mt-10 mb-10">
       <ToastContainer autoClose={2000}/>
-    <div className="w-full px-0 pt-0 pb-4 m-auto bg-white rounded-md border border-gray-500 lg:max-w-full">
-                            <nav className="relative flex navcustomproperty flex-wrap items-center justify-between pl-2 pr-0 py-1 mb-2 ring-1 ring-black rounded-none">
+    <div className="w-full px-0 pt-0 pb-4 m-auto bg-white rounded-lg border border-gray-500 lg:max-w-full">
+                            <nav className="relative flex navcustomproperty flex-wrap items-center justify-between pl-2 pr-0 py-1 mb-2 ring-1 ring-red-700 rounded-lg bg-orange-800 h-10">
                                 <h2 className="text-sm font-semibold text-center text-white">
                                     PAYMENT RECEIPT
                                 </h2>
@@ -109,7 +109,7 @@ const PaymentReceiptViewPaymentDetailsInHindi = ({setDisplayHindiForm, consumerN
                                                                                 </td>
                                                                                 <td className="px-1 py-1 text-center  whitespace-nowrap">
                                                                                     <p className="text-2xl font-extrabold tracking-tight uppercase font-body text-center">
-                                                                                        BHILAI MUNICIPAL CORPORATION, BHILAI</p>
+                                                                                        RAJNANDGAON MUNICIPAL CORPORATION, RAJNANDGAON</p>
                                                                                 </td>
                                                                                 <td className="px-1 py-1 text-center  whitespace-nowrap">
                                                                                     <img className="h-12" src="/img/swachh_bharat.jpg" />
@@ -922,7 +922,7 @@ const PaymentReceiptViewPaymentDetailsInHindi = ({setDisplayHindiForm, consumerN
                                                                 <tbody>
                                                                     <tr>
                                                                         <td className="px-3 py-0 font-bold text-xs font-normal text-gray-900 whitespace-normal">
-                                                                            BHILAI MUNICIPAL CORPORATION, BHILAI
+                                                                            RAJNANDGAON MUNICIPAL CORPORATION, RAJNANDGAON
                                                                         </td>
                                                                         <td className="px-3 py-0 text-right text-xs text-gray-900 font-normal whitespace-normal">
                                                                             In Collaboration With <b>Sri Publications & Stationers Pvt. Ltd.</b>

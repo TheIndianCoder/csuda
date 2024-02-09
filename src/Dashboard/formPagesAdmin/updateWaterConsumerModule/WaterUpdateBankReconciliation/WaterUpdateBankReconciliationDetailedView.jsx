@@ -14,7 +14,7 @@ const WaterUpdateBankReconciliationDetailedView = ({
     <div>
       {/* first module */}
       <div className="mb-6 mt-2 shadow">
-        <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+        <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
           <h2 className="whitespace-normal text-center text-sm text-sm  font-semibold text-gray-900 text-white">
             Bank Details
           </h2>
@@ -103,8 +103,8 @@ const WaterUpdateBankReconciliationDetailedView = ({
       </div>
       {/* second module */}
       <div className="mb-6 shadow">
-        <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
-          <h2 className="whitespace-normal text-center text-sm text-sm font-medium font-semibold font-semibold text-gray-900 text-white">
+        <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-lg py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
+          <h2 className="whitespace-normal text-center text-sm   f font-semibold text-gray-900 ">
             Owner Details
           </h2>
         </nav>
@@ -153,7 +153,7 @@ const WaterUpdateBankReconciliationDetailedView = ({
       </div>
       {/* third module */}
       <div className="mb-8 mt-2 shadow">
-        <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+        <nav className="navcustomproperty relative mb-2 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
           <h2 className="text-center text-sm font-semibold text-white">
             Transaction Details
           </h2>

@@ -223,7 +223,7 @@ const WaterCounterCollectionReport = () => {
             "Upto Month": item.upToMonth,
             "Transaction Date": item.transactionDate,
             "Transaction Number": item.transactionNo,
-            Amount: item.paidAmount,
+            "Amount": item.paidAmount,
             "Mode Of Payment": item.modeOfPayment,
             "Cheque/DD No.": item.chequeDDNo,
             "Bank Name": item.bankName,
@@ -270,8 +270,8 @@ const WaterCounterCollectionReport = () => {
   return (
     <>
       <ToastContainer autoClose={2000} />
-      <div className="m-4 mt-4 rounded-none border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
-        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+      <div className="m-4 mt-4 rounded-lg border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
+        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
           <h2 className="text-center text-sm font-semibold text-white">
             Water Counter Collection Report
           </h2>
@@ -286,7 +286,6 @@ const WaterCounterCollectionReport = () => {
                 Date From
                 <p className="contents text-sm font-bold text-red-600">*</p>
               </label>
-
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <Stack spacing={3}>
                   <DesktopDatePicker
@@ -296,6 +295,7 @@ const WaterCounterCollectionReport = () => {
                     id="date_from"
                     name="date_from"
                     inputFormat="YYYY-MM-DD"
+                    color="gray"
                     renderInput={(params) => <TextField {...params} />}
                     disableFuture={true}
                     value={counterCollectionReport?.date_from}
@@ -320,6 +320,7 @@ const WaterCounterCollectionReport = () => {
                     }
                     id="date_to"
                     name="date_to"
+                    date='gray'
                     inputFormat="YYYY-MM-DD"
                     renderInput={(params) => <TextField {...params} />}
                     disableFuture={true}
@@ -342,6 +343,7 @@ const WaterCounterCollectionReport = () => {
                 onChange={(e) => handleCounterCollectionReport(e, "")}
                 name="wardNo"
                 defaultValue={wardId}
+                color="gray"
                 label="select"
                 className="py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
               >
@@ -368,6 +370,7 @@ const WaterCounterCollectionReport = () => {
                 onChange={(e) => handleCounterCollectionReport(e, "")}
                 name="operatorName"
                 defaultValue={operatorName}
+                color="gray"
                 label="select"
                 className="py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
               >
@@ -401,6 +404,7 @@ const WaterCounterCollectionReport = () => {
                 //  defaultValue={consumerDetail.wardNo}
                 defaultValue={paymentMode}
                 label="select"
+                color="gray"
                 className="py-2 pl-2 pr-3 text-xs font-bold text-gray-900
                         "
               >
@@ -440,7 +444,7 @@ const WaterCounterCollectionReport = () => {
                 visible={true}
                 height="40"
                 width="40"
-                colors={["#2fa158", "#2fa158", "#2fa158", "#2fa158", "#2fa158"]}
+                colors={["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"]}
               />
             </div>
           ) : null}
@@ -459,7 +463,7 @@ const WaterCounterCollectionReport = () => {
                           <tbody>
                             <tr className="">
                               <td className="whitespace-normal px-4 py-2 text-center  text-sm font-semibold text-blue-900">
-                                BHILAI MUNICIPAL CORPORATION
+                              RAJNANDGAON MUNICIPAL CORPORATION
                               </td>
                             </tr>
                             <tr className="">

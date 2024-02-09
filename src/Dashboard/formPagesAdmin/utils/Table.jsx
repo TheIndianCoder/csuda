@@ -49,7 +49,7 @@ const Table = ({
             visible={true}
             height="40"
             width="40"
-            colors={['#2fa158', '#2fa158', '#2fa158', '#2fa158', '#2fa158']}
+            colors={['#FF0000', '#FF0000', '#FF0000', '#FF0000', '#FF0000']}
 
           />
             }

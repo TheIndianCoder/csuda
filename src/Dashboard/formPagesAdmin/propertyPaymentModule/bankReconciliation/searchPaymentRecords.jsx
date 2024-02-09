@@ -426,7 +426,7 @@ function SearchPaymentRecords({
 
                         </div>
                     ) : (<p className="text-center font-semibold text-xs text-red-700">
-                        {`Something went wrong while searching! Please try again`}
+                        {`No have any data for bank reconciliation! Please try again with different search criteria.`}
                     </p>)
                 ) : isPaymentRecordsLoaded == false ? (
                     (<p className="text-center font-semibold text-xs text-red-700">

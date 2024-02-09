@@ -17,6 +17,7 @@ import {
   Tables,
   Notifications,
 } from "@/Dashboard/pages/dashboard";
+
 const SignUp = () => import("@/Dashboard/pages/auth");
 const SignIn = () => import("@/Dashboard/pages/auth");
 import HomePage from "@/Dashboard/pages/dashboard/homePage";
@@ -92,6 +93,7 @@ const icon = {
 };
 
 export const routes = [
+  // dashboard
   {
     layout: dashboardRoutesObject.dashboardLayout,
     pages: [
@@ -99,7 +101,7 @@ export const routes = [
         icon: <HomeIcon {...icon} />,
         name: "Home",
         path: dashboardRoutesObject.dashboardHome,
-        element: <Home />,
+        //element: <Home />,
         element: <DashboardHome />,
         upIcon: <ChevronUpIcon {...icon} />,
         downIcon: <ChevronDownIcon {...icon} />,
@@ -112,17 +114,17 @@ export const routes = [
         upIcon: <ChevronUpIcon {...icon} />,
         downIcon: <ChevronDownIcon {...icon} />,
       },
-      // {
-      //   icon: <HomeIcon {...icon} />,
-      //   name: "Password Management",
-      //   path: dashboardRoutesObject.dashboardPasswordManagement,
-      //   element: <MainPageUserManagement />,
-      //   upIcon: <ChevronUpIcon {...icon} />,
-      //   downIcon: <ChevronDownIcon {...icon} />,
-      // },
       {
         icon: <HomeIcon {...icon} />,
-        name: "Create New User",
+        name: "Password Management",
+        path: dashboardRoutesObject.dashboardPasswordManagement,
+        element: <MainPageUserManagement />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Add New User",
         path: dashboardRoutesObject.dashboardAddNewUser,
         element: <AddNewUser />,
         upIcon: <ChevronUpIcon {...icon} />,
@@ -138,8 +140,9 @@ export const routes = [
       // },
     ],
   },
+  // SAF Setup
   {
-    layout: dashboardRoutesObject.propertyPaymentLayout,
+    layout:dashboardRoutesObject.safLayout,
     pages: [
       {
         icon: <HomeIcon {...icon} />,
@@ -159,6 +162,12 @@ export const routes = [
         upIcon: <ChevronUpIcon {...icon} />,
         downIcon: <ChevronDownIcon {...icon} />,
       },
+    ]
+  },
+  // property payment
+  {
+    layout: dashboardRoutesObject.propertyPaymentLayout,
+    pages: [
       {
         icon: <HomeIcon {...icon} />,
         name: "Demand and Payment",
@@ -168,7 +177,6 @@ export const routes = [
         upIcon: <ChevronUpIcon {...icon} />,
         downIcon: <ChevronDownIcon {...icon} />,
       },
-      
       {
         icon: <HomeIcon {...icon} />,
         name: "Bank Reconciliation",
@@ -216,6 +224,7 @@ export const routes = [
       },
     ],
   },
+  // property report
   {
     layout: dashboardRoutesObject.propertyReportLayout,
     pages: [
@@ -317,7 +326,360 @@ export const routes = [
       // },
     ],
   },
-  
+  // user charges
+  {
+    layout: dashboardRoutesObject.userChargesLayout,
+    pages: [
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Add New User",
+        path: dashboardRoutesObject.userChargesAddNewUser,
+        //element: <Home />,
+        element: <MainPageAddNewUser />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Add New Renter",
+        path: dashboardRoutesObject.userChargesAddNewRenter,
+        //element: <Home />,
+        element: <MainPageAddNewRenter />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      // {
+      //   icon: <HomeIcon {...icon} />,
+      //   name: "Print Payment Receipts User Wise",
+      //   path: dashboardRoutesObject.userChargesPrintAllPayment,
+      //   //element: <Home />,
+      //   element: <PrintAllPaymentUserWise />,
+      //   upIcon: <ChevronUpIcon {...icon} />,
+      //   downIcon: <ChevronDownIcon {...icon} />,
+      // },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Demand And Payment",
+        path: dashboardRoutesObject.userChargesDemandAndPayment,
+        //element: <Home />,
+        element: <MainPageUserChargesDemandAndPayment />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      // {
+      //   icon: <HomeIcon {...icon} />,
+      //   name: "Waste Counter Collection Report",
+      //   path: dashboardRoutesObject.userChargesWasteCounterCollectionReport,
+      //   element: <MainPageUserChargesWasteCounterCollectionReport />,
+      //   upIcon: <ChevronUpIcon {...icon} />,
+      //   downIcon: <ChevronDownIcon {...icon} />,
+      // },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Ward Wise Demand Generation",
+        path: dashboardRoutesObject.userwardWiseDemandGeneration,
+        //element: <Home />,
+        element: <Userwardwisedemand />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        name: "Ward Wise Demand Report",
+        path: dashboardRoutesObject.userChargesWardWiseDemandReport,
+        //element: <Home />,
+        element: <MainPageUserChargesWardWiseDemandReport />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Counter Collection Report",
+        path: dashboardRoutesObject.userChargesCounterCollectionReport,
+        //element: <Home />,
+        element: <MainPageUserChargesCounterCollectionReport />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Last Payment Update",
+        path: dashboardRoutesObject.userChargesLastPaymentUpdate,
+        //element: <Home />,
+        element: <MainPageUserChargesLastPaymentUpdate />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Update Payment mode",
+        path: dashboardRoutesObject.userChargesUpdatePaymentMode,
+        //element: <Home />,
+        element: <MainPageUserChargesUpdatePaymentMode />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Bank Reconciliation",
+        path: dashboardRoutesObject.userChargesBankReconciliation,
+        //element: <Home />,
+        element: <MainPageUserChargesBankReconciliation />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Update Consumer",
+        path: dashboardRoutesObject.userChargesUpdateConsumer,
+        //element: <Home />,
+        element: <MainPageUserChargesUpdateConsumer />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        name: "Delete Transaction",
+        path: dashboardRoutesObject.userChargesDeleteTransaction,
+        //element: <Home />,
+        element: <DeleteTransaction />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Update Category Range Details",
+        path: dashboardRoutesObject.userChargesUpdateCategoryRange,
+        //element: <Home />,
+        element: <MainpageuserChargesUpdateCategoryRange />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      // {
+      //   name: "Delete Transaction",
+      //   path: dashboardRoutesObject.userChargesDeleteTransaction,
+      //   //element: <Home />,
+      //   element: <DeleteTransaction />,
+      //   upIcon: <ChevronUpIcon {...icon} />,
+      //   downIcon: <ChevronDownIcon {...icon} />,
+      // },
+      // {
+      //   name: "Arrear and Current Collection",
+      //   path: dashboardRoutesObject.userChargesArrearAndCurrentCollection,
+      //   //element: <Home />,
+      //   element: <ArrearAndCurrentCollection />,
+      //   upIcon: <ChevronUpIcon {...icon} />,
+      //   downIcon: <ChevronDownIcon {...icon} />,
+      // },
+      {
+        name: "Team Wise Collection Summary",
+        path: dashboardRoutesObject.userChargesTeamWiseCollectionSummary,
+        //element: <Home />,
+        element: <MainPageUserChargesTeamWiseCollectionSummary />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        name: "Payment Mode Wise Collection",
+        path: dashboardRoutesObject.userChargesPaymentModeWiseCollection,
+        //element: <Home />,
+        element: <MainPageUserChargesPaymentModeWiseCollection />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+    ],
+  },
+  // water consumer
+  {
+    layout: dashboardRoutesObject.updateWaterConsumerLayout,
+    pages: [
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Add New Consumer",
+        path: dashboardRoutesObject.updateWaterConsumerAddExistingConsumer,
+        //element: <Home />,
+        element: <MainPageAddExistingConsumer />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Update Consumer",
+        path: dashboardRoutesObject.waterUpdateConsumer,
+        //element: <Home />,
+        element: <MainPageUpdateWaterConsumer />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Pay Existing Consumer Demand",
+        path: dashboardRoutesObject.updateWaterConsumerUpdateBasicDetails,
+        //element: <Home />,
+        element: <MainPageUpdateBasicDetails />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },      
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Update Payment Mode",
+        path: dashboardRoutesObject.waterUpdatePaymentMode,
+        //element: <Home />,
+        element: <MainPageWaterUpdatePaymentMode />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Bank Reconciliation",
+        path: dashboardRoutesObject.updateWaterBankReconciliation,
+        //element: <Home />,
+        element: <MainPageWaterBankReconciliation />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Ward Wise Demand Generation",
+        path: dashboardRoutesObject.waterwardWiseDemandGeneration,
+        //element: <Home />,
+        element: <WaterwardWiseDemand />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Last Payment Update",
+        path: dashboardRoutesObject.waterLastPaymentUpdate,
+        //element: <Home />,
+        element: <MainPageLastPaymentUpdate />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      
+      {
+        name: "Delete Transaction",
+        path: dashboardRoutesObject.waterDeleteTransaction,
+        //element: <Home />,
+        element: <WaterdeleteTransaction />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      }, 
+    ],
+  },
+  // water report
+  {
+    layout: dashboardRoutesObject.waterReport,
+    pages: [
+      {
+        name: "Ward Wise Water Demand Report",
+        path: dashboardRoutesObject.updateWaterConsumerWardWiseDemandReport,
+        //element: <Home />,
+        element: <MainPageUpdateWaterWardWiseDemandReport />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      }, 
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Water Counter Collection Report",
+        path: dashboardRoutesObject.waterCounterCollectionReport,
+        //element: <Home />,
+        element: <WaterCounterCollectionReport />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        name: "Arrear and Current Collection",
+        path: dashboardRoutesObject.arrearandCurrentCollection,
+        //element: <Home />,
+        element: <ArrearandCurrentCollection />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        name: "Payment Mode Wise Collection",
+        path: dashboardRoutesObject.updateWaterPaymentModeWiseCollection,
+        //element: <Home />,
+        element: <MainPageUpdateWaterPaymentModeWiseCollection />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        name: "Team Wise Collection Summary",
+        path: dashboardRoutesObject.updateWaterTeamWiseCollectionSummary,
+        //element: <Home />,
+        element: <MainPageUpdateWaterTeamWiseCollectionSumary />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },    
+    ]
+  },
+  {
+    layout: dashboardRoutesObject.bhubhatakLayout,
+    pages: [
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "New Lease Registration",
+        path: dashboardRoutesObject.bhubhatakNewLeaseRegistration,
+        //element: <Home />,
+        element: <NewLeaseRegistration />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Demand and Payment",
+        path: dashboardRoutesObject.bhubhatakDemandandPayment,
+        //element: <Home />,
+        element: <DemandandPayment />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Counter Collection Report",
+        path: dashboardRoutesObject.bhubhatakUpdateLastPaymentReceipt,
+        //element: <Home />,
+        element: <UpdateLastPaymentReceipt />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Payment Mode Wise Report",
+        path: dashboardRoutesObject.bhubhatakReports,
+
+        element: <Reports />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Update/ Lease Renewals",
+        path: dashboardRoutesObject.bhubhatakUpdateLeaseRenewal,
+        //element: <Home />,
+        element: <MainPageUpdateLeaseRenewal />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Update Last Payment Challan",
+        path: dashboardRoutesObject.bhubhatakUpdateLastPaymentChallan,
+        //element: <Home />,
+        element: <MainPageUpdateLastPaymentChallan />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "Deactivation Panel",
+        path: dashboardRoutesObject.bhubhatakDeactivationPanel,
+        //element: <Home />,
+        element: <MainPageDeactivationPanel />,
+        upIcon: <ChevronUpIcon {...icon} />,
+        downIcon: <ChevronDownIcon {...icon} />,
+      },
+    ],
+  },
 ];
 
 export default routes;

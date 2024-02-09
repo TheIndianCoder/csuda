@@ -34,7 +34,7 @@ export function Sidenav({ brandImg, brandName, routes }) {
         className={`relative border-b ${sidenavType === "dark" ? "border-white/20" : "border-blue-gray-50"
           }`}
       >
-        <Link to="/dashboard/home" className="flex items-center gap-4 py-6 px-2">
+        <Link to="/dashboard/dashboard/home" className="flex items-center gap-4 py-6 px-2">
           <Typography
             variant="h6"
             as="div"
@@ -62,6 +62,27 @@ export function Sidenav({ brandImg, brandName, routes }) {
       </div>
       <div className="m-2">
         <ul className="mb-4 flex flex-col gap-1 p-0">
+          {/* <div className="hover:bg-red-400 hover:cursor-pointer">
+            <Typography
+              variant="h6"
+              as="div"
+              className="py-2 px-4"
+              color={sidenavType === "dark" ? "white" : "blue-gray"}
+            >
+              Navigation
+            </Typography>
+          </div> */}
+          <div className=" hover:bg-red-800 hover:border-black py-2 px-4 hover:cursor-pointer rounded-lg"> 
+            <NavLink
+              to="/dashboard/dashboard/home"
+              className={` text-white text-md font-bold  rounded-lg` }
+              // className= {({ isActive }) => isActive? "bg-red-800" : ""}
+              activeClassName="bg-red-800 text-white"
+            >
+              Dashboard
+            </NavLink>
+          </div>
+          
           <DashboardAccordion />
         </ul>
       </div>

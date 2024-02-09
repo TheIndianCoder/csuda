@@ -153,7 +153,7 @@ export function SignIn() {
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
       {/* <div className="absolute inset-0 z-0 h-full w-full" /> */}
       <div className="container mx-auto p-4 bg-red-800">
-        <Card className="absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4 p-5">
+        <Card className="absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4 p-5 h-auto">
           <CardHeader
             // variant="gradient"
             // color="blue"
@@ -164,7 +164,7 @@ export function SignIn() {
             </Typography> */}
             
           </CardHeader>
-          <img src="/img/ch_logo.png" alt="logo" className="h-[20rem]" />
+          <img src="/img/ch_logo.png" alt="logo" className="h-[16rem]" />
           <CardBody className="flex flex-col gap-4">
             {
               loginErrorMessage ? <p className="text-xs text-red-700 font-bold" >{loginErrorMessage}</p> : null
@@ -207,12 +207,15 @@ export function SignIn() {
           }
           <CardFooter className="pt-0">
             <Button  className="bg-orange-700 hover:bg-white hover:text-black hover:border-red-700" onClick={handleSignIn} fullWidth>
-              Sign In
+              Login
             </Button>
-
+            <Button  className="bg-red-800 mt-4 hover:text-black hover:border-red-700 hover:cursor-pointer" onClick={() => navigate(-1)} fullWidth>
+              Back
+            </Button>
+            
             {/* <Typography variant="small" className="mt-6 flex justify-center">
               Don't have an account?
-              <Link to="http://localhost:80/">
+              <Link to="http://65.1.253.21/">
                 <Typography
                   as="span"
                   variant="small"

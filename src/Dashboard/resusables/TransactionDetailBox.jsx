@@ -86,7 +86,7 @@ const TransactionDetailBox = ({
   return (
     <>
       <div className="m-auto mt-6 w-full rounded-none border border-gray-500 bg-white px-0 pb-4 pt-0 lg:max-w-full">
-        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+        <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
           <h2 className="text-center text-sm font-semibold text-white">
             Details of Transaction No. {transactionId}
           </h2>
@@ -242,7 +242,7 @@ const TransactionDetailBox = ({
       </div>
       {paymentMode !== "cash" && (
         <div className="mt-5 shadow">
-          <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-black">
+          <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-2 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
             <h2 className="text-center text-sm font-semibold text-white">
               Payment Mode Options
             </h2>
@@ -260,6 +260,7 @@ const TransactionDetailBox = ({
                   onChange={(e) =>
                     setPaymentOptions({ ...paymentOptions, cardType: e })
                   }
+                  color="gray"
                   label="select"
                   className=" py-2 pl-2 pr-3 text-xs
                 font-bold text-gray-900"
@@ -276,6 +277,7 @@ const TransactionDetailBox = ({
                 <TextField
                   name="cardNo"
                   value={paymentOptions.cardNo}
+                  color="gray"
                   onChange={handlePaymentOptions}
                 />
               </div>
@@ -287,6 +289,7 @@ const TransactionDetailBox = ({
                 <TextField
                   name="cardHolderName"
                   value={paymentOptions.cardHolderName}
+                  color="gray"
                   onChange={handlePaymentOptions}
                 />
               </div>
@@ -299,30 +302,31 @@ const TransactionDetailBox = ({
                 </p>
                 <span>:</span>
                 <Select
-                            name="bankName"
-                            defaultValue={paymentOptions.bankName}
-                            onChange={bankNameChange} 
-                            label="select"
-                            className="w-full py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
-                          >
-                            {setPaymentModeDetailsInputFromAPI?.length > 0 ? (
-                              paymentModeDetailsInputFromAPI[0]?.bankNameBeans.map(
-                                (item, index) => {
-                                  const { id, bank_name } = item;
-                                  return (
-                                    <Option
-                                      key={index}
-                                      value={JSON.stringify(item)}
-                                    >
-                                      {bank_name}
-                                    </Option>
-                                  );
-                                }
-                              )
-                            ) : (
-                              <Option>Loading...</Option>
-                            )}
-                          </Select>
+                  name="bankName"
+                  defaultValue={paymentOptions.bankName}
+                  onChange={bankNameChange} 
+                  label="select"
+                  color="gray"
+                  className="w-full py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
+                >
+                    {setPaymentModeDetailsInputFromAPI?.length > 0 ? (
+                      paymentModeDetailsInputFromAPI[0]?.bankNameBeans.map(
+                        (item, index) => {
+                          const { id, bank_name } = item;
+                          return (
+                            <Option
+                              key={index}
+                              value={JSON.stringify(item)}
+                            >
+                              {bank_name}
+                            </Option>
+                          );
+                        }
+                      )
+                    ) : (
+                      <Option>Loading...</Option>
+                    )}
+                  </Select>
                 {/* <TextField
                   name="bankName"
                   value={paymentOptions.bankName}
@@ -337,6 +341,7 @@ const TransactionDetailBox = ({
                 <TextField
                   name="branchName"
                   value={paymentOptions.branchName}
+                  color="gray"
                   onChange={handlePaymentOptions}
                 />
               </div>
@@ -349,6 +354,7 @@ const TransactionDetailBox = ({
                 <TextField
                   type="number"
                   name={featureType === 0 ? "chqDdNo" : "chequeNo"}
+                  color="gray"
                   value={
                     featureType === 0
                       ? paymentOptions.chqDdNo
@@ -369,6 +375,7 @@ const TransactionDetailBox = ({
                     inputFormat="YYYY-MM-DD"
                     renderInput={(params) => <TextField {...params} />}
                     disableFuture={true}
+                    color="gray"
                     value={
                       featureType === 0
                         ? paymentOptions.chqDdDte

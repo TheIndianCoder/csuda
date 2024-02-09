@@ -21,8 +21,8 @@ const WaterWardNumberCollector = ({ heading, SearchFunction }) => {
   ];
 
   return (
-    <div className="my-8 w-full shadow">
-      <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-none py-1 pl-2 pr-0 ring-1 ring-black">
+    <div className="my-8 w-full shadow bg-white rounded-lg">
+      <nav className="navcustomproperty relative mb-1 flex flex-wrap items-center justify-between rounded-lg py-1 pl-2 pr-0 ring-1 ring-red-700 bg-orange-800 h-10">
         <h2 className="text-center text-sm font-semibold text-white">
           {heading}
         </h2>
@@ -36,6 +36,7 @@ const WaterWardNumberCollector = ({ heading, SearchFunction }) => {
           <Select
             label="select"
             className="z-10 py-2 pl-2 pr-3 text-xs font-bold text-gray-900"
+            color="gray"
             onChange={(value) => {
               const selectedWard = JSON.parse(value);
               setWardNo(selectedWard.id);

@@ -520,6 +520,8 @@ export function SAF_Form(props) {
         is_isdp: "No",
         is_school: "No",
         is_complex: "No",
+        buildingType: "No",
+        buildingAge: "No",
         financial_year: "",
         fy_id: -1
     })
@@ -652,6 +654,20 @@ export function SAF_Form(props) {
                     return {
                         ...prevState,
                         rain_harvest: prevState.rain_harvest == 'Yes' ? 'No' : 'Yes'
+                    }
+                })
+            }else if (eventId.includes('buildingAge')){
+                setSAFNewFormOtherDetails((prevState)=>{
+                    return{
+                        ...prevState,
+                        buildingAge: prevState.buildingAge == 'Yes' ? 'No' : 'Yes'
+                    }
+                })
+            }else if(eventId.includes('buildingType')){
+                setSAFNewFormOtherDetails((prevState)=>{
+                    return{
+                        ...prevState,
+                        buildingType: prevState.buildingType == 'Yes' ? 'No' : 'Yes'
                     }
                 })
             }
@@ -939,7 +955,7 @@ export function SAF_Form(props) {
                     body: JSON.stringify(finalReqObjForSafNewEntry),
                 }
 
-                const safNewEntryUrl = `${SUDA_API_BASE_URL}/user/SAFEntry`
+                const safNewEntryUrl = `${SUDA_API_BASE_URL}/user/SAFEntry` 
                 const response = await fetch(safNewEntryUrl, requestOptions)
                 // const responseBody = await response.json()
                 console.log("woohooo")
@@ -2436,6 +2452,7 @@ export function SAF_Form(props) {
                                 }
                                
                             </div> */}
+                            {/* checkbox for widow */}
                             <div className="md:flex-1 lg:flex min-w-fit max-w-fit items-end gap-4 custom-checkbox">
                                 <Checkbox
                                     //disabled={safNewFormOtherDetails.is_handicapped == 'Yes'}
@@ -2449,6 +2466,7 @@ export function SAF_Form(props) {
                             {/* <div className="flex min-w-fit  text-sm">
                                 
                             </div> */}
+                            {/* checkbox for Physically Disabled */}
                             <div className="md:flex-1 lg:flex min-w-fit max-w-fit items-end gap-4 custom-checkbox">
                                 <Checkbox
                                     //disabled={safNewFormOtherDetails.is_widow_ex_army == 'Yes'}
@@ -2530,6 +2548,24 @@ export function SAF_Form(props) {
                             {/* <div className="flex min-w-fit  text-sm">
                                
                             </div> */}
+                            <div className="md:flex-1 lg:flex min-w-fit max-w-fit items-end gap-4 custom-checkbox">
+                                <Checkbox
+                                    id='buildingAge'
+                                    checked={safNewFormOtherDetails.buildingAge === 'Yes'}
+                                    onChange={handleSAFNewFormOtherDetailsCheckboxChange}
+                                    color="orange"
+                                    className="custom-checkbox"
+                                    label="If building more then 25 years ? "/>
+                            </div>
+                            <div className="md:flex-1 lg:flex min-w-fit max-w-fit items-end gap-4 custom-checkbox">
+                                <Checkbox
+                                    id='buildingType'
+                                    checked={safNewFormOtherDetails.buildingType === 'Yes'}
+                                    onChange={handleSAFNewFormOtherDetailsCheckboxChange}
+                                    color="orange"
+                                    className="custom-checkbox"
+                                    label="If building have government property ? "/>
+                            </div>
                         </div>
                         <div className="mb-6"></div>
 
